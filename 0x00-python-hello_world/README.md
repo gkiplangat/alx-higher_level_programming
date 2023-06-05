@@ -7,8 +7,7 @@ This directory has the files for all the tasks for 0x00-python_hello_world
 Write a Shell script that runs a Python script.
 <br>
 The Python file name will be saved in the environment variable `$PYFILE`
-<br>
-```
+<br>`
 guillaume@ubuntu:~/py/0x00$ cat main.py 
 #!/usr/bin/python3
 print("Best School")
@@ -17,7 +16,8 @@ guillaume@ubuntu:~/py/0x00$ export PYFILE=main.py
 guillaume@ubuntu:~/py/0x00$ ./0-run
 Best School
 guillaume@ubuntu:~/py/0x00$
-```
+`
+<br>
 
 * Task 1:
 * Task 2:
