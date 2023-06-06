@@ -1,14 +1,10 @@
 #!/usr/bin/python3
 def uppercase(str):
-    uppercase_chars = []
-    for char in str:
-        if 'a' <= char <= 'z':
-            uppercase_chars.append(chr(ord(char) - 32))
+    upper_str = []
+    for c in str:
+        if ord('a') <= ord(c) <= ord('z'):
+            upper_str.append(chr(ord(c) - 32))
         else:
-            uppercase_chars.append(char)
-    new_string = "".join(uppercase_chars)
+            upper_str.append(c)
+    new_string = "".join(upper_str)
     print("{}".format(new_string))
-
-# Test the function
-uppercase("Hello, World!")
-
