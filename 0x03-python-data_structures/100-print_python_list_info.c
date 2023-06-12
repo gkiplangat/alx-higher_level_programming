@@ -4,10 +4,10 @@
 #include "/usr/include/python3.4/object.h"
 
 /**
- * print_piython_list_info - prints information related to Python lists
+ * print_python_list_info - prints python lists information
  * @p: Pointer to the Python object.
  *
- * Return: Nothing.
+ * Return:void.
  */
 
 void print_python_list_info(PyObject *p)
