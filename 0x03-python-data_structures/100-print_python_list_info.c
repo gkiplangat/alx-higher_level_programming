@@ -4,13 +4,13 @@
 #include "/usr/include/python3.4/object.h"
 
 /**
- * python_list_info - prints information related to Python lists
+ * print_piython_list_info - prints information related to Python lists
  * @p: Pointer to the Python object.
  *
  * Return: Nothing.
  */
 
-void python_list_info(PyObject *p)
+void print_python_list_info(PyObject *p)
 {
 	Py_ssize_t size = PyList_Size(p);
 	Py_ssize_t allocated = ((PyListObject *)p)->allocated;
