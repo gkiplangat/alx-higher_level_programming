@@ -29,4 +29,3 @@ def roman_to_int(roman_string):
             result += current_value
 
     return result
-
