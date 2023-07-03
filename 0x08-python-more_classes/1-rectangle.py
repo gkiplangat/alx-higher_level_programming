@@ -3,6 +3,7 @@
 This module defines the widht and height of a rectangle
 """
 
+
 class Rectangle:
     """This is the Representation of the Rectangle class"""
 
@@ -41,10 +42,10 @@ class Rectangle:
         @property
         def width(self):
             """
-            Getter function for private variable, width 
+            Getter function for private variable, width
             """
             return self.__width
-    
+
         @width.setter
         def width(self, value):
             """
@@ -59,5 +60,3 @@ class Rectangle:
                 raise ValueError("width must be >= 0")
             else:
                 self.__width = value
-
-
