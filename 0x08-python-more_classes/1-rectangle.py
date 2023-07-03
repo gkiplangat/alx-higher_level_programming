@@ -7,7 +7,7 @@ This module defines the widht and height of a rectangle
 class Rectangle:
     """This is the Representation of the Rectangle class"""
 
-    def __init__(self,width=0, height=0):
+    def __init__(self, width=0, height=0):
         """Initializing a rectangle instance.
 
         Args:
