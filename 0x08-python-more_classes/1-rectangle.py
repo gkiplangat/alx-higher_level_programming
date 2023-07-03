@@ -5,10 +5,13 @@
 
 
 class Rectangle:
-    """Representation of a Rectangle class"""
+    """
+    Representation of a Rectangle class
+    """
 
     def __init__(self, width=0, height=0):
-        """Initialize a rectangle instance.
+        """
+        Initialize a rectangle instance.
 
         Args:
             width (int, optional): width of the rectangle. Defaults to 0.
@@ -19,12 +22,15 @@ class Rectangle:
 
     @property
     def width(self):
-        """ Getter function for private variable, width """
+        """
+        Getter function for private variable, width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ Setter function for private variable, width.
+        """
+        Setter function for private variable, width.
 
         Args:
             value (int): The new width to set.
@@ -38,12 +44,15 @@ class Rectangle:
 
     @property
     def height(self):
-        """ Getter function for private variable, height """
+        """
+        Getter function for private variable, height
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Setter function for private variable, height.
+        """
+        Setter function for private variable, height.
 
         Args:
             value (int): The new height to set.
