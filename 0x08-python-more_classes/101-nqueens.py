@@ -16,6 +16,7 @@ if SIZE < 4:
     print("N must be at least 4")
     sys.exit(1)
 
+
 def solve_n_queens(N: int):
     """Computes all possible solutions to the problem for a given N.
 
@@ -49,6 +50,6 @@ def solve_n_queens(N: int):
     for solution in solutions:
         print(solution)
 
+
 if __name__ == "__main__":
     solve_n_queens(SIZE)
-
