@@ -5,13 +5,16 @@
 
 
 class Rectangle:
-    """Representation of a Rectangle class"""
+    """
+    Representation of a Rectangle class
+    """
 
     number_of_instances = 0
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        """Initialize a rectangle instance.
+        """
+        Initialize a rectangle instance.
 
         Args:
             width (int, optional): width of the rectangle. Defaults to 0.
@@ -23,12 +26,15 @@ class Rectangle:
 
     @property
     def width(self):
-        """ Getter function for private variable, width """
+        """
+        Getter function for private variable, width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ Setter function for private variable, width.
+        """
+        Setter function for private variable, width.
 
         Args:
             value (int): The new width to set.
@@ -42,12 +48,15 @@ class Rectangle:
 
     @property
     def height(self):
-        """ Getter function for private variable, height """
+        """
+        Getter function for private variable, height
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Setter function for private variable, height.
+        """
+        Setter function for private variable, height.
 
         Args:
             value (int): The new height to set.
@@ -60,17 +69,22 @@ class Rectangle:
             self.__height = value
 
     def area(self):
-        """Computes and returns the area of the rectangle."""
+        """
+        Computes and returns the area of the rectangle.
+        """
         return self.height * self.width
 
     def perimeter(self):
-        """Computes and returns the perimeter of the rectangle."""
+        """
+        Computes and returns the perimeter of the rectangle.
+        """
         if any((self.height == 0, self.width == 0)):
             return 0
         return 2*(self.height + self.width)
 
     def __str__(self) -> str:
-        """Draws the square.
+        """
+        Draws the square.
 
         Returns:
             str: The square represented by given symbol.
@@ -81,7 +95,8 @@ class Rectangle:
         return "\n".join((symbol * self.width) for _ in range(self.height))
 
     def __repr__(self) -> str:
-        """eval() compatible representation of object
+        """
+        eval() compatible representation of object
 
         Returns:
             str: String representation of object that can be used with eval()
@@ -89,6 +104,8 @@ class Rectangle:
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        """Prints a message when an instance is deleted."""
+        """
+        Prints a message when an instance is deleted.
+        """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
