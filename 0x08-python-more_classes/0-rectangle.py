@@ -2,3 +2,5 @@
 
 class Rectangle:
     pass
+r = Rectangle()
+print(r)
