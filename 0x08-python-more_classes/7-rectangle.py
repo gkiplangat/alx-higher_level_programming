@@ -8,6 +8,7 @@ class Rectangle:
     """Representation of a Rectangle class"""
 
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """Initialize a rectangle instance.
@@ -72,11 +73,12 @@ class Rectangle:
         """Draws the square.
 
         Returns:
-            str: The square using #.
+            str: The square represented by given symbol.
         """
         if any((self.width == 0, self.height == 0)):
             return ""
-        return "\n".join(('#' * self.width) for _ in range(self.height))
+        symbol = str(self.print_symbol)
+        return "\n".join((symbol * self.width) for _ in range(self.height))
 
     def __repr__(self) -> str:
         """eval() compatible representation of object
