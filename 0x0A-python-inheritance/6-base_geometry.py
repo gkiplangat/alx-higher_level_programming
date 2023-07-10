@@ -15,4 +15,4 @@ class BaseGeometry:
         Raises:
             Exception: Because the logic is not implemented yet.
         """
-    raise Exception("area() is not implemented")
+        raise Exception("area() is not implemented")
