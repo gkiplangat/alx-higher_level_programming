@@ -1,22 +1,19 @@
 #!/usr/bin/python3
-Rectangle = __import__('8-rectangle').Rectangle
+"""
+Rectangle Module
+"""
 
-r = Rectangle(3, 5)
 
-print(r)
-print(dir(r))
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-try:
-    print("Rectangle: {} - {}".format(r.width, r.height))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
 
-try:
-    r2 = Rectangle(4, True)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+class Rectangle(BaseGeometry):
+    """
+    Defines a Rectangle class.
+    """
 
-try:
-    r2 = Rectangle({'h'}, True)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def __init__(self, width: int, height: int):
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
+        self.__width = width
+        self.__height = height
