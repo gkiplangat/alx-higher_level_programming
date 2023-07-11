@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-## 0-read_file.py
+#0-read_file.py
 """
 Reads and prints the contents of a text file.
 """
