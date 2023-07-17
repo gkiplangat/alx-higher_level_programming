@@ -15,8 +15,16 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """
         Initializing square class
-        """
 
+         Args:
+            size (int): The length of one side of the square.
+            x (int, optional): The x-coordinate of the top-left
+                               corner of the square. Defaults to 0.
+            y (int, optional): The y-coordinate of the top-left
+                               corner of the square. Defaults to 0.
+            id (str, optional): A unique identifier for the square.
+                               Defaults to None.
+        """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -26,7 +34,7 @@ class Square(Rectangle):
 
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
-#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Size<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
     @property
     def size(self):
         """
@@ -44,9 +52,9 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-    def update(self,*args, **kwargs):
+    def update(self, *args, **kwargs):
         """
-        Update square class
+        Updating square class
 
         Args:
             *args (tuple): New attribute values.
@@ -58,7 +66,7 @@ class Square(Rectangle):
             **kwargs (dict): New key/value pairs of attributes.
         """
 
-        if args not None and len(args) != 0:
+        if args is not None and len(args) != 0:
             if len(args) >= 1:
                 if type(args[0]) != int and args[0] is not None:
                     raise TypeError("id must be an integer")
@@ -86,4 +94,10 @@ class Square(Rectangle):
         """
         Returning dictionary representation of square
         """
-        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
+
+        return {
+            "id": self.id,
+            "x": self.x,
+            "size": self.width,
+            "y": self.y
+        }
