@@ -22,3 +22,16 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries) -> str:
+        """
+        Serializes a list of dictionaries to JSON string.
+
+        Args:
+            list_dictionaries (list of dicts): List of dictionaries.
+
+        Returns:
+            str: JSON string representation of the list of dictionaries.
+        """
+        return json.dumps(list_dictionaries) if list_dictionaries else "[]"
