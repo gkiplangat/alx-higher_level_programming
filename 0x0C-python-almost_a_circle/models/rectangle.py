@@ -22,6 +22,7 @@ class Rectangle(Base):
 
         super().__init__(id)
 
+# >>>>>>>>>>>>>>>>>>>   WIDTH   <<<<<<<<<<<<<<<<<<<<
     @property
     def width(self):
         """
@@ -40,6 +41,7 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
+# >>>>>>>>>>>>>>>>>>>   HEIGHT   <<<<<<<<<<<<<<<<<<<<
     @property
     def height(self):
         """
@@ -60,6 +62,7 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
+# >>>>>>>>>>>>>>>>>>>   X   <<<<<<<<<<<<<<<<<<<<
     @property
     def x(self):
         """
@@ -80,6 +83,7 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
+# >>>>>>>>>>>>>>>>>>>   Y   <<<<<<<<<<<<<<<<<<<<
     @property
     def y(self):
         """
