@@ -10,13 +10,22 @@ from pathlib import Path
 
 
 class Base:
-    """
-    Base class which will be inherited by all other classes.
+    """Base model.
+
+    This Represents the "base" for all other classes in project 0x0C*.
+
+    Private Class Attributes:
+        __nb_object (int): Number of instantiated Bases.
     """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """Initialize a new Base.
+
+        Args:
+            id (int): The identity of the new Base.
+        """
         if id is not None:
             self.id = id
         else:
@@ -38,8 +47,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string) -> any:
-        """
-        Deserializes a JSON string to Python object.
+        """Deserializes a JSON string to Python object.
 
         Args:
             json_string (JSON str): The JSON string to deserialize.
@@ -51,8 +59,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """
-        Writes the JSON string representation of `list_objs` to a file.
+        """Writes the JSON string representation of `list_objs` to a file.
 
         Args:
             list_objs (list of objs): List of objects to be written.
@@ -67,8 +74,13 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """
-        Creates an instance with all attributes set.
+        """Creates an instance with all attributes set.
+
+        Args:
+            dictionary: Dictionary of arguments to be used to create instance.
+
+        Returns:
+            object: An instance of a class that inherits from this class.
         """
 
         if cls.__name__ == "Rectangle":
@@ -82,8 +94,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls) -> list:
-        """
-        Reads data from a JSON file and creates instances with the data.
+        """Reads data from a JSON file and creates instances with the data.
 
         Returns:
             list: A list of instances created using the read data.
@@ -99,8 +110,10 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """
-        Serializes a list of objects to a CSV file.
+        """Serializes a list of objects to a CSV file.
+
+        Args:
+            list_objs (list): List of objects whose data is to be saved to CSV.
         """
         filename = f"{cls.__name__}.csv"
         with open(filename, mode="w", encoding="utf-8") as csv_file:
@@ -114,8 +127,10 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls) -> list:
-        """
-        Deserializes a CSV file and uses the data to create new objects.
+        """Deserializes a CSV file and uses the data to create new objects.
+
+        Returns:
+            list: List of objects created with the data read from the CSV.
         """
         filename = f"{cls.__name__}.csv"
 
@@ -150,7 +165,7 @@ class Base:
                 rec_width = list_rectangles[0].width * 2
                 rec_height = list_rectangles[0].height * 2
                 t_obj.begin_fill()
-                t_obj.color("yello", "orange")
+                t_obj.color("pink", "purple")
                 t_obj.forward(rec_width)
                 t_obj.left(90)
                 t_obj.forward(rec_height)
@@ -169,7 +184,7 @@ class Base:
                     t_obj.left(90)
 
                     t_obj.begin_fill()
-                    t_obj.color("yellow", "orange")
+                    t_obj.color("pink", "purple")
                     t_obj.forward(rec_w)
                     t_obj.left(90)
                     t_obj.forward(rec_h)
@@ -188,7 +203,7 @@ class Base:
                 t_obj.forward(50)
 
                 t_obj.begin_fill()
-                t_obj.color("#000000", "#800000")
+                t_obj.color("#39E745", "#39E745")
                 for _ in range(4):
                     t_obj.forward(sqr_size)
                     t_obj.left(90)
