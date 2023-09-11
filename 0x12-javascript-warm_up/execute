@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+chmod a+x *.js
