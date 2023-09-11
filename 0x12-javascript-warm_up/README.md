@@ -4,8 +4,8 @@
 |By: Guillaume|
 |:--|
 |Weight: 1|
-|Project will start Sep 5, 2022 6:00 AM, must end by Sep 6, 2022 6:00 AM|
-|was released at Sep 5, 2022 12:00 PM|
+|Project will start Sep 11, 2022 6:00 AM, must end by Sep 12, 2022 6:00 AM|
+|was released at Sep 11, 2022 12:00 PM|
 |An auto review will be launched at the deadline|
 
 # Background Context
