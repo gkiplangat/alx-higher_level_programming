@@ -26,8 +26,8 @@ if __name__ == "__main__":
     SELECT cities.id, cities.name, states.name
     FROM cities
     JOIN states ON cities.state_id = states.id
-    ORDER BY cities.id ASC
     WHERE states.name = %s
+    ORDER BY cities.id ASC
     """
 
     cursor.execute(query, (state_name,))
