@@ -23,9 +23,10 @@ if __name__ == "__main__":
     )
     cursor = db.cursor()
     query = """
-    SELECT GROUP_CONCAT(cities.name ORDER BY cities.id ASC SEPARATOR ', ')
+    SELECT cities.id, cities.name, states.name
     FROM cities
     JOIN states ON cities.state_id = states.id
+    ORDER BY cities.id ASC
     WHERE states.name = %s
     """
 
