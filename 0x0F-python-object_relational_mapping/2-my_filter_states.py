@@ -9,7 +9,7 @@ if __name__ == "__main__":
     """
         Take 3 arguments username, password, db_name
     """
-    username, password, db_name, state_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[3]
+    username, password, db_name, state_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 
     db = MySQLdb.connect(
         user=username,
