@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""  script that sends a POST request to the passed URL with the email"""
+"""  Sends POST request to passed URL with email"""
 from urllib.request import urlopen, Request
 from urllib.parse import urlencode
-import sys
+from sys import argv
 
 
 if __name__ == "__main__":
-    url = sys.argv[1]
-    email = sys.argv[2]
-    values = {'email': email}
-    data = urlencode(values)
+    url = argv[1]
+    email = argv[2]
+    value = {'email': email}
+    data = urlencode(value)
     data = data.encode('ascii')
-    req = Request(url, data, headers={})
-    with urlopen(req) as f:
-        res = f.read().decode('utf8')
-        print(res)
+    request = Request(url, data, headers={})
+    with urlopen(request) as f:
+        response = f.read().decode('utf8')
+        print(response)
